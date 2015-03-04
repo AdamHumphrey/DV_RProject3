@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1425499622585.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D04B6FBB",
+    "lastKnownWriteTime" : 27303570957139969,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "G3",
+        "contentUrl" : "content?title=G3&file=e56f034314da4fb883d2859ff01166bd.htm",
+        "displayedObservations" : 1000,
+        "displayedVariables" : 2,
+        "totalObservations" : 2574,
+        "variables" : 2
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
