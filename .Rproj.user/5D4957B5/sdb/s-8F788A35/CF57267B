@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1425499721969.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CF57267B",
+    "lastKnownWriteTime" : 27303570957139969,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "G2",
+        "contentUrl" : "content?title=G2&file=8e1c6117effb4b6a80662eaa8176e948.htm",
+        "displayedObservations" : "504",
+        "displayedVariables" : 4,
+        "totalObservations" : "504",
+        "variables" : "4"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
