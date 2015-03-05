@@ -20,4 +20,5 @@ tbl_df(aircrafttrades)
 ammotrades <- G2 %>% select(NUMBER_DATAPOINTS, AMMO_COUNTRY_AREA) %>% filter(!is.na(AMMO_COUNTRY_AREA))
 tbl_df(ammotrades)
 
-leathertrades 
+altrades <- G2 %>% select(NUMBER_DATAPOINTS, AL_COUNTRY_AREA) %>% filter(!is.na(AL_COUNTRY_AREA))
+tbl_df(altrades)

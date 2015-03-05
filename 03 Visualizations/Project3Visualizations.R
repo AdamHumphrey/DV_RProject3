@@ -5,6 +5,12 @@ require("gplots")
 
 ggplot(G1, aes(x = AIRCRAFT_COUNTRY_AREA, y = NUMBER_DATAPOINTS)) + geom_point(colour = "dodgerblue2") + ggtitle("Same Number of Trades")
 
-plot1 <- ggplot(G2, aes(x = AIRCRAFT_COUNTRY_AREA, y = NUMBER_DATAPOINTS)) + geom_point(colour="dodgerblue2") + labs(x = "Aircraft Trade Countries") + ggtitle("Aircraft Trades") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
+tradeplot1 <- ggplot(aircrafttrades, aes(x = NUMBER_DATAPOINTS, y = AIRCRAFT_COUNTRY_AREA)) + geom_point(colour="dodgerblue2") + labs(x = "Aircraft Trade Countries") + ggtitle("Aircraft Trades") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
 
-plot1 <- plot1 + theme(axis.text.x=element_text(angle=90, size=5, vjust=0.5))
+tradeplot2 <- ggplot(ammotrades, aes(x = NUMBER_DATAPOINTS, y = AMMO_COUNTRY_AREA)) + geom_point(colour="red") + labs(x = "Number of Ammo Trades", y = "Countries") + ggtitle("Ammo Trades") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
+
+tradeplot3 <- ggplot(altrades, aes(x = NUMBER_DATAPOINTS, y = AL_COUNTRY_AREA)) + geom_point(colour="chocolate") + labs(x = "Number of Leather Trades", y = "Countries") + ggtitle("Article Leather Trades") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
+
+tradeplot1
+tradeplot2
+tradeplot3
