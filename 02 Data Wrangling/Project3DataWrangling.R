@@ -2,8 +2,6 @@ library("plyr")
 library("dplyr")
 library("tidyr")
 
-View(aircraft)
-View(ammo)
 
 T1 <- aircraft %>% group_by(AIRCRAFT_COUNTRY_AREA) %>% summarise(NUMBER_DATAPOINTS=n()); T2 <- ammo %>% group_by(AMMO_COUNTRY_AREA) %>% summarise(NUMBER_DATAPOINTS=n()); T3 <- leather %>% group_by(AL_COUNTRY_AREA) %>% summarise(NUMBER_DATAPOINTS=n()); G1 <- inner_join(T1,T2,by="NUMBER_DATAPOINTS") %>% inner_join(.,T3,by="NUMBER_DATAPOINTS") %>% arrange(NUMBER_DATAPOINTS)  %>% select(NUMBER_DATAPOINTS,AIRCRAFT_COUNTRY_AREA,AMMO_COUNTRY_AREA,AL_COUNTRY_AREA)
 tbl_df(G1)

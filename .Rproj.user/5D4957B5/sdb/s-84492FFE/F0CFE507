@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle: \"Project 3 RMD File\"\noutput: html_document\n---\n\nThis is the R Markdown file for project 3.\n\nGroup members: Travis Cox, Lola Shonaike, and Adam Humphrey\n\nData source: https://app.enigma.io/search/source/org.un.comtrade\n\n##Summary of data\n\nOur data includes three tables of United Nations commodity trade statistics. The database we pulled our data from contains trade records dating back to 1962. We analyzed data on the trade of aircraft and spacecraft parts, arms and ammunition, and articles of leather. Each file was imported into SQLDeveloper from a CSV file, and then imported into R Studio with the given function on the project requirements page.\n\n###Here is a summary of the data that we are using.\n```{r}\nsource(\"../01 Data/Project3Data.R\", echo = TRUE)\n```\n\n##Data Wrangling\n\nWe have three sets of data wrangling to show. The first set shows the countries that had the same number of trades in the ammo, aircraft, or leather tables. The second set shows the total number of trades that each country did. The third set shows which countries traded each commodity in the same year.\n\n###Here are the data wrangling sets.\n```{r}\nsource(\"../02 Data Wrangling/Project3DataWrangling.R\", echo = TRUE)\n```\n\n##Visualizations\n\nWe've made visualizations for each of our data wrangling sets. The first visualization shows each country that had the same number of trades (all categories combined) as another country. The second set of visualizations show the number of trades that each country made for each category of goods. \n\n```{r}\nsource(\"../03 Visualizations/Project3Visualizations.R\", echo = TRUE)\n```\n\n\n###categoricals.png\n![My Figure](./categoricals.png)\n\n###measures.png\n![My Figure2](./measures.png)\n",
+    "created" : 1425679167283.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2304786502",
+    "id" : "F0CFE507",
+    "lastKnownWriteTime" : 1425686025,
+    "path" : "C:/Users/Travis Cox/DataVisualization/Project3/DV_RProject3/00 Doc/Project3Rmd.Rmd",
+    "project_path" : "00 Doc/Project3Rmd.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

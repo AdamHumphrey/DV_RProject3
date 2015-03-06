@@ -34,3 +34,10 @@ We've made visualizations for each of our data wrangling sets. The first visuali
 ```{r}
 source("../03 Visualizations/Project3Visualizations.R", echo = TRUE)
 ```
+
+
+###categoricals.png
+![My Figure](./categoricals.png)
+
+###measures.png
+![My Figure2](./measures.png)
