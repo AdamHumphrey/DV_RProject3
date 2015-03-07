@@ -35,6 +35,9 @@ We've made visualizations for each of our data wrangling sets. The first visuali
 source("../03 Visualizations/Project3Visualizations.R", echo = TRUE)
 ```
 
+##PNG's
+
+The following png's were created using the PNG.R file located in the 01 Data folder.
 
 ###categoricals.png
 ![My Figure](./categoricals.png)

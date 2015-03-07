@@ -12,16 +12,17 @@ tbl_df(G2)
 R1 <- aircraft %>% select(AIRCRAFT_YEAR,AIRCRAFT_COUNTRY_AREA) %>% distinct() %>% mutate(YEAR=as.character(AIRCRAFT_YEAR)) %>% mutate(COUNTRY=as.character(AIRCRAFT_COUNTRY_AREA)) %>% select(YEAR,COUNTRY); R2 <- ammo %>% select(AMMO_YEAR,AMMO_COUNTRY_AREA) %>% distinct() %>% mutate(YEAR=as.character(AMMO_YEAR)) %>% mutate(COUNTRY=as.character(AMMO_COUNTRY_AREA)) %>% select(YEAR,COUNTRY); R3 <- leather %>% select(AL_YEAR,AL_COUNTRY_AREA) %>% distinct() %>% mutate(YEAR=as.character(AL_YEAR)) %>% mutate(COUNTRY=as.character(AL_COUNTRY_AREA)) %>% select(YEAR,COUNTRY); G3 <- intersect(R1,R2) %>% intersect(.,R3) %>% arrange(YEAR) %>% arrange(COUNTRY)
 tbl_df(G3)
 
-aircrafttrades <- G2 %>% select(NUMBER_DATAPOINTS, AIRCRAFT_COUNTRY_AREA) %>% filter(!is.na(AIRCRAFT_COUNTRY_AREA)) %>% slice(206:215)
+aircrafttrades <- G2 %>% select(NUMBER_DATAPOINTS, AIRCRAFT_COUNTRY_AREA) %>% filter(!is.na(AIRCRAFT_COUNTRY_AREA)) %>% slice(208:213)
 tbl_df(aircrafttrades)
 
-ammotrades <- G2 %>% select(NUMBER_DATAPOINTS, AMMO_COUNTRY_AREA) %>% filter(!is.na(AMMO_COUNTRY_AREA)) %>% slice(198:207)
+ammotrades <- G2 %>% select(NUMBER_DATAPOINTS, AMMO_COUNTRY_AREA) %>% filter(!is.na(AMMO_COUNTRY_AREA)) %>% slice(198:206)
 tbl_df(ammotrades)
 
-altrades <- G2 %>% select(NUMBER_DATAPOINTS, AL_COUNTRY_AREA) %>% filter(!is.na(AL_COUNTRY_AREA)) %>% slice(203:212)
+altrades <- G2 %>% select(NUMBER_DATAPOINTS, AL_COUNTRY_AREA) %>% filter(!is.na(AL_COUNTRY_AREA)) %>% slice(207:212)
 tbl_df(altrades)
-yc1<-group_by(G3,COUNTRY,YEAR,COUNTRY)
-yc3<-summarise(yc1,countries=n_distinct(YEAR))
-yc3
+
+yc1<- G3 %>% group_by(COUNTRY,YEAR) %>% summarise(countries=n_distinct(YEAR)) %>% slice(300:318.5)
+
+tbl_df(yc1)
 
 
