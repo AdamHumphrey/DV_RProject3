@@ -18,7 +18,7 @@ yearplot2<-ggplot(G3,aes(x=YEAR,y=COUNTRY, label=rownames(G3)))+geom_text()
 tradeplot1
 tradeplot2
 tradeplot3
-tradeplot4
+
 yearPlot1
 yearPlot2
 
