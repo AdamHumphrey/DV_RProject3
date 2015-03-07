@@ -8,7 +8,7 @@ require("grid")
 
 myplot <- function(df, x) {
   names(df) <- c("x", "n")
-  ggplot(df, aes(x=x, y=n)) + geom_point()
+  ggplot(df, aes(x=x, y=n)) + geom_point() + theme(axis.text.x = element_blank())
 }
 
 categoricals <- eval(parse(text=substring(getURL(URLencode('http://129.152.144.84:5001/rest/native/?query="select * from aircraft_revised"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_das3734', PASS='orcl_das3734', MODE='native_mode', MODEL='model', returnFor = 'R',returnDimensions = 'True'), verbose = TRUE), 1, 2^31-1)))
@@ -41,7 +41,7 @@ dev.off()
 
 myplot1 <- function(df, x) {
   names(df) <- c("x")
-  ggplot(df, aes(x=x)) + geom_histogram()
+  ggplot(df, aes(x=x)) + geom_histogram() + theme(axis.text.x = element_blank())
 }
 l <- list()
 for (i in names(ddf)) {   
