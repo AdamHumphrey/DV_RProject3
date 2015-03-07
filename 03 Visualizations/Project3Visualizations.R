@@ -11,6 +11,14 @@ tradeplot2 <- ggplot(ammotrades, aes(x = AMMO_COUNTRY_AREA, y = NUMBER_DATAPOINT
 
 tradeplot3 <- ggplot(altrades, aes(x = AL_COUNTRY_AREA, y = NUMBER_DATAPOINTS)) + geom_area(colour="chocolate") + labs(x = "Number of Leather Trades", y = "Countries") + ggtitle("Article Leather Trades") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
 
+yearPlot1<-ggplot(yc3, aes(x = COUNTRY, y = YEAR, color=factor(YEAR))) +geom_point()
+yearplot2<-ggplot(G3,aes(x= YEAR, y=COUNTRY))+geom_line(aes(color="Country Variety"))+geom_point(aes(color="Country Points"))+scale_colour_manual(name='', values=c('Country Variety'='grey','Country Points'='red'))
+yearplot2<-ggplot(G3,aes(x=YEAR,y=COUNTRY, label=rownames(G3)))+geom_text()
+
 tradeplot1
 tradeplot2
 tradeplot3
+tradeplot4
+yearPlot1
+yearPlot2
+

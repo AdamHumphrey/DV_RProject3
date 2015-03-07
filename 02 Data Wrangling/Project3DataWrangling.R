@@ -20,3 +20,8 @@ tbl_df(ammotrades)
 
 altrades <- G2 %>% select(NUMBER_DATAPOINTS, AL_COUNTRY_AREA) %>% filter(!is.na(AL_COUNTRY_AREA)) %>% slice(203:212)
 tbl_df(altrades)
+yc1<-group_by(G3,COUNTRY,YEAR,COUNTRY)
+yc3<-summarise(yc1,countries=n_distinct(YEAR))
+yc3
+
+
